@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Página de Vagas</title>
+</head>
+
+<body>
+
+    <div id="abso" class="abso hidden">
+        <div class="overlay"></div>
+        <div class="confirmacao">
+            <h4 style="font-size: 20px;">Obrigado pela candidatura!</h4>
+            <p style="margin: 0;">Te daremos mais informações quando possível!</p>
+            <button onclick="fecharOverlay()">Fechar</button>
+        </div>
+    </div>
+
+
+    <div id="abso2" class="abso2 hidden">
+        <div id="addvaga" class="vaga hidden">
+            <h2 style="margin-top:0;">Nova vaga</h2>
+            <label for="titulo">Titulo da Vaga:</label>
+            <input id="titulo" type="text" placeholder="Escreva aqui o titulo da vaga">
+            <p id="titulovazio" class="hidden" style="margin: 5px 0 0 0; padding: 0; color: red;">O titulo da vaga não pode estar vazio</p>
+            <label style="margin-top: 15px; margin-bottom: 0px;" for="salario">Salário:</label>
+            <input id="salario" type="text" placeholder="Escreva aqui o salário">
+            <p id="salariovazio" class="hidden" style="margin: 5px 0 0 0; padding: 0; color: red;">O salario da vaga não pode estar vazio</p>
+            <label style="margin-top: 15px; margin-bottom: 0px;" for="requisitos">Requisitos:</label>
+            <input id="requisitos" type="text" placeholder="Escreva aqui os requisitos">
+            <button onclick="confirmarVaga()" id="confirmar">Confirmar</button>
+        </div>
+        <div id="overlayfraca" class="overlayfraca"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <h1>Vagaliza</h1>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vagas.html">Vagas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li id="contato"><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main" class="main-vagas">
+        <!-- <p id="texto-vagas" style="font-size: 60px; margin-top: 200px;">Nenhuma Vaga Disponível no Momento!</p> -->
+
+        <!-- Botão de adicionar vaga -->
+        <div id="addcard" class="addCard">
+            <button onclick="addVaga()">
+                <img src="img/botao-adicionar.png" alt="Adicionar Vaga" width="100%">
+            </button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <h3 style="margin-top: 100px; font-size: 28px;">Site para localizar vagas de emprego</h3>
+            <p style="font-size: 24px;">&copy; - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/controls.js"></script>
+</body>
+
+</html>
